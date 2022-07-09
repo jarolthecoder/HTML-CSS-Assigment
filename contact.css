@@ -52,7 +52,7 @@ button {
     cursor: pointer;
 }
 
-.row {
+.row, .icon-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -204,4 +204,62 @@ textarea::placeholder {
 
 #main-footer p {
     color: var(--lightGray);
+}
+
+/* Responsive Style Mobile */
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3, .quote{
+        font-size: 20px;
+    }
+
+    .icon-container {
+        flex-direction: row;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    #section-1 .col-right {
+        gap: 2em;
+    }
+
+    #main-navbar .navigation {
+        flex-direction: row;
+    }
+
+    p {
+        padding: 1em 0;
+    }
+
+    .nav-link {
+        padding: 2em 1.5em;
+    }
+
+    #main-navbar, #hero, 
+    #section-1, #section-2, 
+    #cta, #main-footer {
+        padding: 3em 2em;
+    }
+
+    .section-img, #contact-form {
+        width: 100%;
+    }
+
+    #hero, #cta .col-left,
+    #cta .col-right {
+        text-align: center;
+    }
 }
